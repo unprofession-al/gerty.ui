@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name gertyuiApp.controller:AboutCtrl
+ * @name gertyuiApp.controller:NodesCtrl
  * @description
- * # AboutCtrl
+ * # NodesCtrl
  * Controller of the gertyuiApp
  */
 angular.module('gertyuiApp')
-  .controller('AboutCtrl', function () {
+  .controller('NodesCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
