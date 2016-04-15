@@ -1,0 +1,35 @@
+<h1>{{node.name}}</h1>
+
+
+<h2>Roles</h2>
+
+<span data-ng-repeat="role in node.roles">
+  <a ui-sref="role({role: role})" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+      {{role}}
+  </a>
+</span>
+
+<h2>Variables</h2>
+
+<table width="100%" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Key</th>
+      <th class="mdl-data-table__cell--non-numeric">Value</th>
+      <th class="mdl-data-table__cell--non-numeric">Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr data-ng-repeat="nv in nodeVars | filter:query | orderBy:'key'">
+        <td class="mdl-data-table__cell--non-numeric">
+            {{ nv.key }}
+        </td>
+        <td class="mdl-data-table__cell--non-numeric">
+            <pre>{{ yamlVars[nv.key] }}</pre>
+        </td>
+        <td class="mdl-data-table__cell--non-numeric">
+            <a ui-sref="role({role: nv.source})">{{ nv.source }}</a><br />(Bucket: {{ nv.source_bucket }})
+        </td>
+    </tr>
+  </tbody>
+</table>

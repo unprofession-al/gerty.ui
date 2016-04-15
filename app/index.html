@@ -50,12 +50,19 @@
           <a class="mdl-navigation__link" href="">Link</a>
         </nav>
       </div>
+
       <main class="mdl-layout__content">
-        <div class="page-content" ng-view=""><!-- Your content goes here --></div>
+        <div class="inner-content">
+            <div class="page-content" ui-view=""><!-- Your content goes here --></div>
+        </div>
       </main>
+
     </div>
-        <script src="//code.jquery.com/jquery-2.2.3.js"></script>
-<script src="//d3js.org/d3.v3.min.js"></script>
+    
+    <!-- FOR TREE -->
+    <script src="//code.jquery.com/jquery-2.2.3.js"></script>
+    <script src="//d3js.org/d3.v3.min.js"></script>
+    <!-- END FOR TREE -->
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
@@ -69,13 +76,20 @@
     <script src="bower_components/lodash/lodash.js"></script>
     <script src="bower_components/restangular/dist/restangular.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-breadcrumb/release/angular-breadcrumb.js"></script>
+    <script src="bower_components/js-yaml/dist/js-yaml.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
+        <script src="scripts/services/auth.js"></script>
         <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/login.js"></script>
+        <script src="scripts/controllers/roles.js"></script>
+        <script src="scripts/controllers/role.js"></script>
         <script src="scripts/controllers/nodes.js"></script>
+        <script src="scripts/controllers/node.js"></script>
         <script src="scripts/controllers/graph.js"></script>
         <!-- endbuild -->
 

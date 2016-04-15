@@ -30,6 +30,8 @@ module.exports = function(config) {
       'bower_components/lodash/lodash.js',
       'bower_components/restangular/dist/restangular.js',
       'bower_components/angular-ui-router/release/angular-ui-router.js',
+      'bower_components/angular-breadcrumb/release/angular-breadcrumb.js',
+      'bower_components/js-yaml/dist/js-yaml.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

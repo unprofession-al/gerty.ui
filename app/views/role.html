@@ -1,0 +1,39 @@
+<h1>{{role.name}}</h1>
+
+<h2>Nodes</h2>
+
+<span ng-if="!role.nodes">This role has no nodes...</span>
+
+<span data-ng-repeat="node in role.nodes">
+  <a ui-sref="node({node: node})" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+    {{ node }}
+  </a>
+</span>
+
+<h2>Children</h2>
+
+<span ng-if="!role.children">This role has no childer...</span>
+
+<span data-ng-repeat="child in role.children">
+  <a ui-sref="role({role: child})" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+    {{ child }}
+  </a>
+</span>
+
+<h2>Parent</h2>
+
+<span ng-if="!role.parent">Sadly, this role has no parent...</span>
+
+<a ng-if="role.parent" ui-sref="role({role: role.parent})" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+    {{ role.parent }}
+</a>
+
+
+<h2>Variables</h2>
+
+<span ng-if="!role.vars">This role has no variables...</span>
+
+<div data-ng-repeat="bucket in role.vars">
+  <h3>{{bucket.name}}</h3>
+  <pre>{{yamlVars[bucket.name]}}
+</div>

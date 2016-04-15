@@ -1,13 +1,13 @@
 <table width="100%" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
   <thead>
     <tr>
-      <th class="mdl-data-table__cell--non-numeric">Node</th>
+      <th class="mdl-data-table__cell--non-numeric">Role</th>
     </tr>
   </thead>
   <tbody>
-    <tr data-ng-repeat="node in nodes | filter:query | orderBy:'node'">
+    <tr data-ng-repeat="role in roles | filter:query | orderBy:'role'">
         <td class="mdl-data-table__cell--non-numeric">
-            <a ui-sref="node({node: node})">{{node}}</a>
+            <a ui-sref="role({role: role})">{{ role }}</a>
         </td>
     </tr>
   </tbody>

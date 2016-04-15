@@ -2,22 +2,22 @@
 
 /**
  * @ngdoc function
- * @name gertyuiApp.controller:NodesCtrl
+ * @name gertyuiApp.controller:RolesCtrl
  * @description
- * # NodesCtrl
+ * # RolesCtrl
  * Controller of the gertyuiApp
  */
 angular.module('gertyuiApp')
-.controller('NodesCtrl', [
+.controller('RolesCtrl', [
     '$scope',
     'Restangular',
     function ($scope, Restangular) {
-        var baseNodes = Restangular.all('nodes/');
+        var baseRoles = Restangular.all('roles/');
         $scope.reloadScope = function() {
-            baseNodes.getList().then(function(nodes) {
-                $scope.nodes = nodes;
+            baseRoles.getList().then(function(roles) {
+                $scope.roles = roles;
             }, function errorCallback() {
-                console.log('Failed to fetch nodes from server');
+                console.log('Failed to fetch roles from server');
             });
         };
 
