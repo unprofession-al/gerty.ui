@@ -23,7 +23,7 @@ var svg = d3.select("#graph").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.json("http://inventory.stxt.media.int:3031/transformers/tree?role=all").get(function(error, flare) {
+d3.json("http://inventory.stxt.media.int:9090/transformers/tree?role=all").get(function(error, flare) {
   if (error) throw error;
 
   root = flare;
