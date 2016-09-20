@@ -77,7 +77,8 @@ angular
       });
     }])
   .run(['Restangular', '$rootScope', '$location', '$cookieStore', '$http', function (Restangular, $rootScope, $location, $cookieStore, $http) {
-    $rootScope.baseUrl = 'http://inventory.stxt.media.int:9090/api/v1';
+    // $rootScope.baseUrl = 'http://inventory.stxt.media.int:9090/api/v1';
+    $rootScope.baseUrl = 'http://127.0.0.1:8008/api/v1';
     Restangular.setBaseUrl($rootScope.baseUrl);
 
     var authdata = $cookieStore.get('authdata');

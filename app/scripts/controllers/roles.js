@@ -12,7 +12,7 @@ angular.module('gertyuiApp')
     '$scope',
     'Restangular',
     function ($scope, Restangular) {
-        var baseRoles = Restangular.all('roles/');
+        var baseRoles = Restangular.all('roles');
         $scope.reloadScope = function() {
             baseRoles.getList().then(function(roles) {
                 $scope.roles = roles;
